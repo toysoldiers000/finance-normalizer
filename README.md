@@ -171,7 +171,7 @@ constraints/
     custom_rule_template.py# 插件模板
 
 storage/
-  db.py                    # SQLite/Postgres 连接
+  db.py                    # SQLite/Postgres 连接 TODO:需要支持SQL吗？
   models.py                # std_account, account_alias 等表结构
   export_aliases.py        # 导出到 CSV/JSON 用于 Git 版本化
 
@@ -196,7 +196,12 @@ sample_aliases.csv
 
 ## 约束与修复引擎设计
 
-### Rule 接口（核心扩展点）
+### Rule 接口（核心扩展点） TODO:等待设计
+
+
+---
+
+# TODO: wait for review
 
 所有规则实现同一个接口：
 
@@ -317,6 +322,8 @@ python -m finance_normalizer.orchestration.pipeline \
 ```
 
 ---
+
+
 
 ## 人工审核工作流（推荐）
 
