@@ -1,7 +1,7 @@
 # Execution
 
-- Check out `Accessing Task Documents` and `Accessing Script Files` in `REPO-ROOT/.github/copilot-instructions.md` for context about mentioned `*.md` and `*.sh`/`*.py` files.
-- All `*.md`, `*.sh`, and `*.py` files should exist; you should not create any new files unless explicitly instructed.
+- Check out `Accessing Task Documents` in `REPO-ROOT/.github/copilot-instructions.md` for context about mentioned `*.md` files.
+- All `*.md` files should exist; you should not create any new files unless explicitly instructed.
   - The `Copilot_Execution.md` file should already exist.
   - If you cannot find the file, you are looking at a wrong folder.
 - Following `Leveraging the Knowledge Base` in `REPO-ROOT/.github/copilot-instructions.md`, find knowledge and documents for this project in `REPO-ROOT/.github/KnowledgeBase/Index.md`.
@@ -45,7 +45,7 @@ I am going to propose some change to the source code.
 
 ## Step 2. Make Sure the Code Passes Checks
 
-- Check out `External Tools Environment and Context` in `REPO-ROOT/.github/copilot-instructions.md` for accessing scripts for building and testing.
+- Check out `External Tools Environment and Context` in `REPO-ROOT/.github/copilot-instructions.md` for build and test command requirements.
   - Strictly follow the instruction above as this repo uses specific tools.
 - Each attempt of build-fix process should be executed in a sub agent.
   - One build-fix process includes one attempt with the following instructions.

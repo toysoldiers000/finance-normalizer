@@ -1,7 +1,7 @@
 # Review
 
 - Check out `Accessing Task Documents` in `REPO-ROOT/.github/copilot-instructions.md` for context about mentioned `*.md` files.
-- All `*.md` and `*.ps1` files should exist; you should not create any new files unless explicitly instructed.
+- All `*.md` files should exist; you should not create any new files unless explicitly instructed.
 - Following `Leveraging the Knowledge Base` in `REPO-ROOT/.github/copilot-instructions.md`, find knowledge and documents for this project in `REPO-ROOT/.github/KnowledgeBase/Index.md`.
 
 ## Goal and Constraints
@@ -138,7 +138,7 @@ Ignore this section if there is no `# Final` in the LATEST chat message.
 
 ### Step F1. Verify Convergence
 
-- Find and execute `copilotPrepareReview.ps1`, it will do the following things:
+- Manually do the following cleanup and rename operations:
   - Delete all `Copilot_Review_Finished_{FileNameFragment}.md` files.
   - Rename all `Copilot_Review_Writing_{FileNameFragment}.md` files to `Copilot_Review_Finished_{FileNameFragment}.md`.
 - Collect all new `Copilot_Review_Finished_{FileNameFragment}.md` files as `Review Board Files`.

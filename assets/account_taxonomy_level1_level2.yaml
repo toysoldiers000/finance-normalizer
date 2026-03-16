@@ -1,0 +1,775 @@
+version: 1
+source_workbook: 强锁定项目双主体空底稿_V7.xlsx
+source_sheets:
+- 1.承租人-合并源数据
+- 2.承租人-本部源数据
+- 4.担保人-合并源数据
+- 5.担保人-本部源数据
+notes:
+- 该 YAML 以工作簿中的“标准会计科目”结构为基础，抽取了一、二级科目关系。
+- 同义词表为初始化种子表：包含原词、常见规范化写法，以及对 '/'、'其中：'、'加：'、'减：'、'(或...)' 等模式的机械拆解。
+- 同义词并非完整权威词库，建议后续接入人工审核与版本化维护。
+reports:
+- id: report_bs
+  name: 资产负债表
+  synonyms:
+  - 资产负债表
+  - 资产负债
+  children:
+  - id: acct_bs_001
+    name: 流动资产合计
+    synonyms:
+    - 流动资产合计
+    children:
+    - id: acct_bs_001_01
+      name: 货币资金
+      synonyms:
+      - 货币资金
+    - id: acct_bs_001_02
+      name: 其中：受限货币资金
+      synonyms:
+      - 其中：受限货币资金
+      - 其中:受限货币资金
+      - 受限货币资金
+    - id: acct_bs_001_03
+      name: 结算备付金
+      synonyms:
+      - 结算备付金
+    - id: acct_bs_001_04
+      name: 拆出资金
+      synonyms:
+      - 拆出资金
+    - id: acct_bs_001_05
+      name: 交易性金融资产 / 短期投资
+      synonyms:
+      - 交易性金融资产 / 短期投资
+      - 交易性金融资产/短期投资
+      - 交易性金融资产
+      - 短期投资
+    - id: acct_bs_001_06
+      name: 衍生金融资产
+      synonyms:
+      - 衍生金融资产
+    - id: acct_bs_001_07
+      name: 应收票据
+      synonyms:
+      - 应收票据
+    - id: acct_bs_001_08
+      name: 应收账款
+      synonyms:
+      - 应收账款
+    - id: acct_bs_001_09
+      name: 应收款项融资
+      synonyms:
+      - 应收款项融资
+    - id: acct_bs_001_10
+      name: 预付款项
+      synonyms:
+      - 预付款项
+    - id: acct_bs_001_11
+      name: 应收保费 / 应收分保账款
+      synonyms:
+      - 应收保费 / 应收分保账款
+      - 应收保费/应收分保账款
+      - 应收保费
+      - 应收分保账款
+    - id: acct_bs_001_12
+      name: 应收利息
+      synonyms:
+      - 应收利息
+    - id: acct_bs_001_13
+      name: 应收股利
+      synonyms:
+      - 应收股利
+    - id: acct_bs_001_14
+      name: 其他应收款
+      synonyms:
+      - 其他应收款
+    - id: acct_bs_001_15
+      name: 买入返售金融资产
+      synonyms:
+      - 买入返售金融资产
+    - id: acct_bs_001_16
+      name: 存货
+      synonyms:
+      - 存货
+    - id: acct_bs_001_17
+      name: 合同资产
+      synonyms:
+      - 合同资产
+    - id: acct_bs_001_18
+      name: 持有待售资产
+      synonyms:
+      - 持有待售资产
+    - id: acct_bs_001_19
+      name: 一年内到期的非流动资产
+      synonyms:
+      - 一年内到期的非流动资产
+    - id: acct_bs_001_20
+      name: 其他流动资产
+      synonyms:
+      - 其他流动资产
+  - id: acct_bs_002
+    name: 非流动资产合计
+    synonyms:
+    - 非流动资产合计
+    children:
+    - id: acct_bs_002_01
+      name: 发放贷款和垫款
+      synonyms:
+      - 发放贷款和垫款
+    - id: acct_bs_002_02
+      name: 债权投资
+      synonyms:
+      - 债权投资
+    - id: acct_bs_002_03
+      name: 其他债权投资
+      synonyms:
+      - 其他债权投资
+    - id: acct_bs_002_04
+      name: 长期应收款
+      synonyms:
+      - 长期应收款
+    - id: acct_bs_002_05
+      name: 长期股权投资
+      synonyms:
+      - 长期股权投资
+    - id: acct_bs_002_06
+      name: 其他权益工具投资
+      synonyms:
+      - 其他权益工具投资
+    - id: acct_bs_002_07
+      name: 其他非流动金融资产
+      synonyms:
+      - 其他非流动金融资产
+    - id: acct_bs_002_08
+      name: 投资性房地产
+      synonyms:
+      - 投资性房地产
+    - id: acct_bs_002_09
+      name: 固定资产
+      synonyms:
+      - 固定资产
+    - id: acct_bs_002_10
+      name: 在建工程
+      synonyms:
+      - 在建工程
+    - id: acct_bs_002_11
+      name: 生产性生物资产
+      synonyms:
+      - 生产性生物资产
+    - id: acct_bs_002_12
+      name: 油气资产
+      synonyms:
+      - 油气资产
+    - id: acct_bs_002_13
+      name: 使用权资产
+      synonyms:
+      - 使用权资产
+    - id: acct_bs_002_14
+      name: 无形资产
+      synonyms:
+      - 无形资产
+    - id: acct_bs_002_15
+      name: 开发支出
+      synonyms:
+      - 开发支出
+    - id: acct_bs_002_16
+      name: 商誉
+      synonyms:
+      - 商誉
+    - id: acct_bs_002_17
+      name: 长期待摊费用
+      synonyms:
+      - 长期待摊费用
+    - id: acct_bs_002_18
+      name: 递延所得税资产
+      synonyms:
+      - 递延所得税资产
+    - id: acct_bs_002_19
+      name: 其他非流动资产
+      synonyms:
+      - 其他非流动资产
+  - id: acct_bs_003
+    name: 资产总计
+    synonyms:
+    - 资产总计
+    children:
+    - id: acct_bs_003_01
+      name: 流动资产合计
+      synonyms:
+      - 流动资产合计
+    - id: acct_bs_003_02
+      name: 非流动资产合计
+      synonyms:
+      - 非流动资产合计
+  - id: acct_bs_004
+    name: 流动负债合计
+    synonyms:
+    - 流动负债合计
+    children:
+    - id: acct_bs_004_01
+      name: 短期借款
+      synonyms:
+      - 短期借款
+    - id: acct_bs_004_02
+      name: 向中央银行借款 / 拆入资金
+      synonyms:
+      - 向中央银行借款 / 拆入资金
+      - 向中央银行借款/拆入资金
+      - 向中央银行借款
+      - 拆入资金
+    - id: acct_bs_004_03
+      name: 交易性金融负债
+      synonyms:
+      - 交易性金融负债
+    - id: acct_bs_004_04
+      name: 衍生金融负债
+      synonyms:
+      - 衍生金融负债
+    - id: acct_bs_004_05
+      name: 应付票据
+      synonyms:
+      - 应付票据
+    - id: acct_bs_004_06
+      name: 应付账款
+      synonyms:
+      - 应付账款
+    - id: acct_bs_004_07
+      name: 预收款项 / 合同负债
+      synonyms:
+      - 预收款项 / 合同负债
+      - 预收款项/合同负债
+      - 预收款项
+      - 合同负债
+    - id: acct_bs_004_08
+      name: 卖出回购金融资产款
+      synonyms:
+      - 卖出回购金融资产款
+    - id: acct_bs_004_09
+      name: 吸收存款及同业存放
+      synonyms:
+      - 吸收存款及同业存放
+    - id: acct_bs_004_10
+      name: 应付职工薪酬
+      synonyms:
+      - 应付职工薪酬
+    - id: acct_bs_004_11
+      name: 应交税费
+      synonyms:
+      - 应交税费
+    - id: acct_bs_004_12
+      name: 应付利息
+      synonyms:
+      - 应付利息
+    - id: acct_bs_004_13
+      name: 应付股利
+      synonyms:
+      - 应付股利
+    - id: acct_bs_004_14
+      name: 其他应付款
+      synonyms:
+      - 其他应付款
+    - id: acct_bs_004_15
+      name: 一年内到期的非流动负债
+      synonyms:
+      - 一年内到期的非流动负债
+    - id: acct_bs_004_16
+      name: 其他流动负债
+      synonyms:
+      - 其他流动负债
+  - id: acct_bs_005
+    name: 非流动负债合计
+    synonyms:
+    - 非流动负债合计
+    children:
+    - id: acct_bs_005_01
+      name: 保险合同准备金
+      synonyms:
+      - 保险合同准备金
+    - id: acct_bs_005_02
+      name: 长期借款
+      synonyms:
+      - 长期借款
+    - id: acct_bs_005_03
+      name: 应付债券
+      synonyms:
+      - 应付债券
+    - id: acct_bs_005_04
+      name: 租赁负债
+      synonyms:
+      - 租赁负债
+    - id: acct_bs_005_05
+      name: 长期应付款
+      synonyms:
+      - 长期应付款
+    - id: acct_bs_005_06
+      name: 长期应付职工薪酬
+      synonyms:
+      - 长期应付职工薪酬
+    - id: acct_bs_005_07
+      name: 预计负债
+      synonyms:
+      - 预计负债
+    - id: acct_bs_005_08
+      name: 递延收益
+      synonyms:
+      - 递延收益
+    - id: acct_bs_005_09
+      name: 递延所得税负债
+      synonyms:
+      - 递延所得税负债
+    - id: acct_bs_005_10
+      name: 其他非流动负债
+      synonyms:
+      - 其他非流动负债
+  - id: acct_bs_006
+    name: 负债合计
+    synonyms:
+    - 负债合计
+    children:
+    - id: acct_bs_006_01
+      name: 流动负债合计
+      synonyms:
+      - 流动负债合计
+    - id: acct_bs_006_02
+      name: 非流动负债合计
+      synonyms:
+      - 非流动负债合计
+  - id: acct_bs_007
+    name: 归属于母公司所有者权益合计
+    synonyms:
+    - 归属于母公司所有者权益合计
+    children:
+    - id: acct_bs_007_01
+      name: 实收资本 (或股本)
+      synonyms:
+      - 实收资本 (或股本)
+      - 实收资本(或股本)
+      - 实收资本
+      - 股本
+    - id: acct_bs_007_02
+      name: 其他权益工具
+      synonyms:
+      - 其他权益工具
+    - id: acct_bs_007_03
+      name: 资本公积
+      synonyms:
+      - 资本公积
+    - id: acct_bs_007_04
+      name: 减：库存股
+      synonyms:
+      - 减：库存股
+      - 减:库存股
+      - 库存股
+    - id: acct_bs_007_05
+      name: 其他综合收益
+      synonyms:
+      - 其他综合收益
+    - id: acct_bs_007_06
+      name: 专项储备
+      synonyms:
+      - 专项储备
+    - id: acct_bs_007_07
+      name: 盈余公积
+      synonyms:
+      - 盈余公积
+    - id: acct_bs_007_08
+      name: 一般风险准备
+      synonyms:
+      - 一般风险准备
+    - id: acct_bs_007_09
+      name: 未分配利润
+      synonyms:
+      - 未分配利润
+  - id: acct_bs_008
+    name: 所有者权益合计
+    synonyms:
+    - 所有者权益合计
+    children:
+    - id: acct_bs_008_01
+      name: 归属于母公司所有者权益合计
+      synonyms:
+      - 归属于母公司所有者权益合计
+    - id: acct_bs_008_02
+      name: 少数股东权益
+      synonyms:
+      - 少数股东权益
+  - id: acct_bs_009
+    name: 负债和所有者权益总计
+    synonyms:
+    - 负债和所有者权益总计
+    children:
+    - id: acct_bs_009_01
+      name: 负债合计
+      synonyms:
+      - 负债合计
+    - id: acct_bs_009_02
+      name: 所有者权益合计
+      synonyms:
+      - 所有者权益合计
+- id: report_is
+  name: 利润表
+  synonyms:
+  - 利润表
+  - 损益表
+  children:
+  - id: acct_is_001
+    name: 营业总收入
+    synonyms:
+    - 营业总收入
+    children:
+    - id: acct_is_001_01
+      name: 营业收入
+      synonyms:
+      - 营业收入
+    - id: acct_is_001_02
+      name: 利息收入 / 手续费及佣金收入
+      synonyms:
+      - 利息收入 / 手续费及佣金收入
+      - 利息收入/手续费及佣金收入
+      - 利息收入
+      - 手续费及佣金收入
+  - id: acct_is_002
+    name: 营业总成本
+    synonyms:
+    - 营业总成本
+    children:
+    - id: acct_is_002_01
+      name: 营业成本
+      synonyms:
+      - 营业成本
+    - id: acct_is_002_02
+      name: 利息支出 / 手续费及佣金支出
+      synonyms:
+      - 利息支出 / 手续费及佣金支出
+      - 利息支出/手续费及佣金支出
+      - 利息支出
+      - 手续费及佣金支出
+    - id: acct_is_002_03
+      name: 税金及附加
+      synonyms:
+      - 税金及附加
+    - id: acct_is_002_04
+      name: 销售费用
+      synonyms:
+      - 销售费用
+    - id: acct_is_002_05
+      name: 管理费用
+      synonyms:
+      - 管理费用
+    - id: acct_is_002_06
+      name: 研发费用
+      synonyms:
+      - 研发费用
+    - id: acct_is_002_07
+      name: 财务费用
+      synonyms:
+      - 财务费用
+  - id: acct_is_003
+    name: 营业利润
+    synonyms:
+    - 营业利润
+    children:
+    - id: acct_is_003_01
+      name: 营业总收入
+      synonyms:
+      - 营业总收入
+    - id: acct_is_003_02
+      name: 营业总成本
+      synonyms:
+      - 营业总成本
+    - id: acct_is_003_03
+      name: 加：其他收益
+      synonyms:
+      - 加：其他收益
+      - 加:其他收益
+      - 其他收益
+    - id: acct_is_003_04
+      name: 投资收益
+      synonyms:
+      - 投资收益
+    - id: acct_is_003_05
+      name: 公允价值变动收益
+      synonyms:
+      - 公允价值变动收益
+    - id: acct_is_003_06
+      name: 信用减值损失
+      synonyms:
+      - 信用减值损失
+    - id: acct_is_003_07
+      name: 资产减值损失
+      synonyms:
+      - 资产减值损失
+    - id: acct_is_003_08
+      name: 资产处置收益
+      synonyms:
+      - 资产处置收益
+  - id: acct_is_004
+    name: 利润总额
+    synonyms:
+    - 利润总额
+    children:
+    - id: acct_is_004_01
+      name: 营业利润
+      synonyms:
+      - 营业利润
+    - id: acct_is_004_02
+      name: 加：营业外收入
+      synonyms:
+      - 加：营业外收入
+      - 加:营业外收入
+      - 营业外收入
+    - id: acct_is_004_03
+      name: 减：营业外支出
+      synonyms:
+      - 减：营业外支出
+      - 减:营业外支出
+      - 营业外支出
+  - id: acct_is_005
+    name: 净利润
+    synonyms:
+    - 净利润
+    children:
+    - id: acct_is_005_01
+      name: 利润总额
+      synonyms:
+      - 利润总额
+    - id: acct_is_005_02
+      name: 减：所得税费用
+      synonyms:
+      - 减：所得税费用
+      - 减:所得税费用
+      - 所得税费用
+  - id: acct_is_006
+    name: 综合收益总额
+    synonyms:
+    - 综合收益总额
+    children:
+    - id: acct_is_006_01
+      name: 归属于母公司所有者的净利润
+      synonyms:
+      - 归属于母公司所有者的净利润
+    - id: acct_is_006_02
+      name: 少数股东损益
+      synonyms:
+      - 少数股东损益
+- id: report_cf
+  name: 现金流量表
+  synonyms:
+  - 现金流量表
+  - 现金流表
+  children:
+  - id: acct_cf_001
+    name: 经营活动现金流入小计
+    synonyms:
+    - 经营活动现金流入小计
+    children:
+    - id: acct_cf_001_01
+      name: 销售商品、提供劳务收到的现金
+      synonyms:
+      - 销售商品、提供劳务收到的现金
+    - id: acct_cf_001_02
+      name: 客户存款和同业存放款项净增加额
+      synonyms:
+      - 客户存款和同业存放款项净增加额
+    - id: acct_cf_001_03
+      name: 向中央银行借款净增加额 / 拆入资金净增加额
+      synonyms:
+      - 向中央银行借款净增加额 / 拆入资金净增加额
+      - 向中央银行借款净增加额/拆入资金净增加额
+      - 向中央银行借款净增加额
+      - 拆入资金净增加额
+    - id: acct_cf_001_04
+      name: 收取利息、手续费及佣金的现金
+      synonyms:
+      - 收取利息、手续费及佣金的现金
+    - id: acct_cf_001_05
+      name: 收到的税费返还
+      synonyms:
+      - 收到的税费返还
+    - id: acct_cf_001_06
+      name: 收到其他与经营活动有关的现金
+      synonyms:
+      - 收到其他与经营活动有关的现金
+  - id: acct_cf_002
+    name: 经营活动现金流出小计
+    synonyms:
+    - 经营活动现金流出小计
+    children:
+    - id: acct_cf_002_01
+      name: 购买商品、接受劳务支付的现金
+      synonyms:
+      - 购买商品、接受劳务支付的现金
+    - id: acct_cf_002_02
+      name: 客户贷款及垫款净增加额
+      synonyms:
+      - 客户贷款及垫款净增加额
+    - id: acct_cf_002_03
+      name: 存放中央银行和同业款项净增加额
+      synonyms:
+      - 存放中央银行和同业款项净增加额
+    - id: acct_cf_002_04
+      name: 支付利息、手续费及佣金的现金
+      synonyms:
+      - 支付利息、手续费及佣金的现金
+    - id: acct_cf_002_05
+      name: 支付给职工以及为职工支付的现金
+      synonyms:
+      - 支付给职工以及为职工支付的现金
+    - id: acct_cf_002_06
+      name: 支付的各项税费
+      synonyms:
+      - 支付的各项税费
+    - id: acct_cf_002_07
+      name: 支付其他与经营活动有关的现金
+      synonyms:
+      - 支付其他与经营活动有关的现金
+  - id: acct_cf_003
+    name: 经营活动产生的现金流量净额
+    synonyms:
+    - 经营活动产生的现金流量净额
+    children:
+    - id: acct_cf_003_01
+      name: 经营活动现金流入小计
+      synonyms:
+      - 经营活动现金流入小计
+    - id: acct_cf_003_02
+      name: 经营活动现金流出小计
+      synonyms:
+      - 经营活动现金流出小计
+  - id: acct_cf_004
+    name: 投资活动现金流入小计
+    synonyms:
+    - 投资活动现金流入小计
+    children:
+    - id: acct_cf_004_01
+      name: 收回投资收到的现金
+      synonyms:
+      - 收回投资收到的现金
+    - id: acct_cf_004_02
+      name: 取得投资收益收到的现金
+      synonyms:
+      - 取得投资收益收到的现金
+    - id: acct_cf_004_03
+      name: 处置固定资产、无形资产和其他长期资产收回的现金净额
+      synonyms:
+      - 处置固定资产、无形资产和其他长期资产收回的现金净额
+    - id: acct_cf_004_04
+      name: 处置子公司及其他营业单位收到的现金净额
+      synonyms:
+      - 处置子公司及其他营业单位收到的现金净额
+    - id: acct_cf_004_05
+      name: 收到其他与投资活动有关的现金
+      synonyms:
+      - 收到其他与投资活动有关的现金
+  - id: acct_cf_005
+    name: 投资活动现金流出小计
+    synonyms:
+    - 投资活动现金流出小计
+    children:
+    - id: acct_cf_005_01
+      name: 购建固定资产、无形资产和其他长期资产支付的现金
+      synonyms:
+      - 购建固定资产、无形资产和其他长期资产支付的现金
+    - id: acct_cf_005_02
+      name: 投资支付的现金
+      synonyms:
+      - 投资支付的现金
+    - id: acct_cf_005_03
+      name: 质押贷款净增加额
+      synonyms:
+      - 质押贷款净增加额
+    - id: acct_cf_005_04
+      name: 取得子公司及其他营业单位支付的现金净额
+      synonyms:
+      - 取得子公司及其他营业单位支付的现金净额
+    - id: acct_cf_005_05
+      name: 支付其他与投资活动有关的现金
+      synonyms:
+      - 支付其他与投资活动有关的现金
+  - id: acct_cf_006
+    name: 投资活动产生的现金流量净额
+    synonyms:
+    - 投资活动产生的现金流量净额
+    children:
+    - id: acct_cf_006_01
+      name: 投资活动现金流入小计
+      synonyms:
+      - 投资活动现金流入小计
+    - id: acct_cf_006_02
+      name: 投资活动现金流出小计
+      synonyms:
+      - 投资活动现金流出小计
+  - id: acct_cf_007
+    name: 筹资活动现金流入小计
+    synonyms:
+    - 筹资活动现金流入小计
+    children:
+    - id: acct_cf_007_01
+      name: 吸收投资收到的现金
+      synonyms:
+      - 吸收投资收到的现金
+    - id: acct_cf_007_02
+      name: 取得借款收到的现金
+      synonyms:
+      - 取得借款收到的现金
+    - id: acct_cf_007_03
+      name: 发行债券收到的现金
+      synonyms:
+      - 发行债券收到的现金
+    - id: acct_cf_007_04
+      name: 收到其他与筹资活动有关的现金
+      synonyms:
+      - 收到其他与筹资活动有关的现金
+  - id: acct_cf_008
+    name: 筹资活动现金流出小计
+    synonyms:
+    - 筹资活动现金流出小计
+    children:
+    - id: acct_cf_008_01
+      name: 偿还债务支付的现金
+      synonyms:
+      - 偿还债务支付的现金
+    - id: acct_cf_008_02
+      name: 分配股利、利润或偿付利息支付的现金
+      synonyms:
+      - 分配股利、利润或偿付利息支付的现金
+    - id: acct_cf_008_03
+      name: 支付其他与筹资活动有关的现金
+      synonyms:
+      - 支付其他与筹资活动有关的现金
+  - id: acct_cf_009
+    name: 筹资活动产生的现金流量净额
+    synonyms:
+    - 筹资活动产生的现金流量净额
+    children:
+    - id: acct_cf_009_01
+      name: 筹资活动现金流入小计
+      synonyms:
+      - 筹资活动现金流入小计
+    - id: acct_cf_009_02
+      name: 筹资活动现金流出小计
+      synonyms:
+      - 筹资活动现金流出小计
+  - id: acct_cf_010
+    name: 现金及现金等价物净增加额
+    synonyms:
+    - 现金及现金等价物净增加额
+    children:
+    - id: acct_cf_010_01
+      name: 经营活动产生的现金流量净额
+      synonyms:
+      - 经营活动产生的现金流量净额
+    - id: acct_cf_010_02
+      name: 投资活动产生的现金流量净额
+      synonyms:
+      - 投资活动产生的现金流量净额
+    - id: acct_cf_010_03
+      name: 筹资活动产生的现金流量净额
+      synonyms:
+      - 筹资活动产生的现金流量净额
+    - id: acct_cf_010_04
+      name: 汇率变动对现金及现金等价物的影响
+      synonyms:
+      - 汇率变动对现金及现金等价物的影响

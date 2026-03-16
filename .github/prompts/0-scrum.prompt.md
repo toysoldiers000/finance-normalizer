@@ -1,7 +1,7 @@
 # Scrum
 
-- Check out `Accessing Task Documents` and `Accessing Script Files` in `REPO-ROOT/.github/copilot-instructions.md` for context about mentioned `*.md` and `*.sh`/`*.py` files.
-- All `*.md`, `*.sh`, and `*.py` files should exist; you should not create any new files unless explicitly instructed.
+- Check out `Accessing Task Documents` in `REPO-ROOT/.github/copilot-instructions.md` for context about mentioned `*.md` files.
+- All `*.md` files should exist; you should not create any new files unless explicitly instructed.
   - The `Copilot_Scrum.md` file should already exist, it may or may not contain content from the last scrum.
   - If you cannot find the file, you are looking at a wrong folder.
 - Following `Leveraging the Knowledge Base` in `REPO-ROOT/.github/copilot-instructions.md`, find knowledge and documents for this project in `REPO-ROOT/.github/KnowledgeBase/Index.md`.
@@ -172,6 +172,5 @@ I made important updates to the source code manually during the execution of the
 
 - You must only run this step after finishing all above steps.
   - In the above steps, necessary change will be updated to `Copilot_Execution.md` and `Copilot_Scrum.md`.
-- Find and execute `copilotPrepare.sh --backup` or `python copilotPrepare.py --backup`. You MUST use the `--backup` parameter.
-  - Remember the first line of the output, it has the absolute path to the backup folder.
-  - By running the backup script, `Copilot_Task.md`, `Copilot_Planning.md`, `Copilot_Execution.md` and `Copilot_Execution_Finding.md` will be backed up and deleted.
+- Manually back up `Copilot_Task.md`, `Copilot_Planning.md`, `Copilot_Execution.md` and `Copilot_Execution_Finding.md` into a new timestamped folder under `REPO-ROOT/.github/Learning/`.
+- After backup, delete those original files from `REPO-ROOT/.github/TaskLogs/`.

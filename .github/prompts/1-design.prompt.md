@@ -1,7 +1,7 @@
 # Design
 
-- Check out `Accessing Task Documents` and `Accessing Script Files` in `REPO-ROOT/.github/copilot-instructions.md` for context about mentioned `*.md` and `*.sh`/`*.py` files.
-- All `*.md`, `*.sh`, and `*.py` files should exist; you should not create any new files unless explicitly instructed.
+- Check out `Accessing Task Documents` in `REPO-ROOT/.github/copilot-instructions.md` for context about mentioned `*.md` files.
+- All `*.md` files should exist; you should not create any new files unless explicitly instructed.
   - The `Copilot_Scrum.md` file should already exist.
   - If you cannot find the file, you are looking at a wrong folder.
   - `Copilot_Task.md` should be put in the same folder.
@@ -37,10 +37,9 @@
 Ignore this section if there is no "# Problem" in the LATEST chat message
 I am starting a fresh new request.
 
-- Find and execute `copilotPrepare.sh` or `python copilotPrepare.py` to clean up everything from the last run.
-  - This script will clean up everything in `Copilot_Task.md`, `Copilot_Planning.md` and `Copilot_Execution.md`.
+- Manually clean up previous run content in `Copilot_Task.md`, `Copilot_Planning.md` and `Copilot_Execution.md`.
   - It is normal to find large amount of changes in these 3 files, DO NOT panic.
-- After `copilotPrepare.sh`/`copilotPrepare.py` finishes, copy precisely my problem description in `# Problem` from the LATEST chat message under a `# PROBLEM DESCRIPTION`.
+- After cleanup, copy precisely my problem description in `# Problem` from the LATEST chat message under a `# PROBLEM DESCRIPTION`.
   - Find task from `Copilot_Scrum.md` if the problem description is in the following format:
     - `Next`: Find the first incomplete task in `Copilot_Scrum.md`.
     - `Complete task No.X`: Locate the specific task in `Copilot_Scrum.md`.

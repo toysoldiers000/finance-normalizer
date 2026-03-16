@@ -1,7 +1,6 @@
 # General Instruction
 
 - `REPO-ROOT` refers to the root directory of the repository.
-- `PROJECT-ROOT` refers to the root directory of the Python project (`finance_normalizer/`).
 - Project structure and modules can be found in `REPO-ROOT/README.md`.
 - Following `Leveraging the Knowledge Base`, find knowledge and documents for this project in `REPO-ROOT/.github/KnowledgeBase/Index.md`.
 - Before writing to a source file, read it again and make sure you respect my parallel editing.

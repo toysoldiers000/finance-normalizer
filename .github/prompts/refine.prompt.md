@@ -1,7 +1,7 @@
 # Refine
 
-- Check out `Accessing Script Files` in `REPO-ROOT/.github/copilot-instructions.md` for context about mentioned `*.ps1` files.
-- All `*.md` and `*.ps1` files should exist; you should not create any new files unless explicitly instructed.
+- Check out `Accessing Task Documents` in `REPO-ROOT/.github/copilot-instructions.md` for context about mentioned `*.md` files.
+- All `*.md` files should exist; you should not create any new files unless explicitly instructed.
 - Following `Leveraging the Knowledge Base` in `REPO-ROOT/.github/copilot-instructions.md`, find knowledge and documents for this project in `REPO-ROOT/.github/KnowledgeBase/Index.md`.
 
 ## Goal and Constraints
@@ -24,8 +24,8 @@
 
 ## Step 1. Find the Earliest Backup Folder
 
-- Find and execute `copilotPrepare.ps1 -Earliest` to get the absolute path to the earliest backup folder in `Learning`.
-- If the script fails, it means there is no material to learn from, stops. Otherwise continue to process this folder.
+- Find the earliest backup folder in `Learning` by sorting folders by creation/modification time.
+- If no backup folder exists, it means there is no material to learn from, stops. Otherwise continue to process this folder.
 
 ## Step 2. Read All Documents
 
